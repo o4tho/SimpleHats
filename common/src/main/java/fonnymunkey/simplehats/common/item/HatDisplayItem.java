@@ -1,6 +1,6 @@
 package fonnymunkey.simplehats.common.item;
 
-import java.util.function.Consumer;
+import net.minecraft.world.entity.PostSpawnProcessor;
 
 import fonnymunkey.simplehats.SimpleHatsCommon;
 import fonnymunkey.simplehats.common.entity.HatDisplay;
@@ -44,7 +44,7 @@ public class HatDisplayItem extends Item {
             AABB aabb = SimpleHatsCommon.MOD_REGISTRY.getHatDisplayEntity().getDimensions().makeBoundingBox(vec3.x(), vec3.y(), vec3.z());
             if(level.noCollision(null, aabb) && level.getEntities(null, aabb).isEmpty()) {
                 if(level instanceof ServerLevel serverLevel) {
-                    Consumer<HatDisplay> consumer = EntityType.appendCustomEntityStackConfig((entity) -> {}, serverLevel, itemStack, context.getPlayer());
+                    PostSpawnProcessor<HatDisplay> consumer = EntityType.appendCustomEntityStackConfig((entity) -> {}, serverLevel, itemStack, context.getPlayer());
                     HatDisplay hatDisplay = SimpleHatsCommon.MOD_REGISTRY.getHatDisplayEntity().create(serverLevel, consumer, pos, EntitySpawnReason.SPAWN_ITEM_USE, true, true);
                     if(hatDisplay == null) return InteractionResult.FAIL;
                     

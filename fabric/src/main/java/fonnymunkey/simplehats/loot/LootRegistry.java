@@ -7,6 +7,8 @@ import java.util.stream.Stream;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootTable;
 
@@ -32,31 +34,31 @@ public abstract class LootRegistry {
 	);
 	
 	public static final List<ResourceKey<LootTable>> LOOT_HATINJECT_ENTITY = Stream.of(
-			EntityType.BLAZE.getDefaultLootTable(),
-			EntityType.CAVE_SPIDER.getDefaultLootTable(),
-			EntityType.CREEPER.getDefaultLootTable(),
-			EntityType.DROWNED.getDefaultLootTable(),
-			EntityType.ELDER_GUARDIAN.getDefaultLootTable(),
-			EntityType.ENDERMAN.getDefaultLootTable(),
-			EntityType.EVOKER.getDefaultLootTable(),
-			EntityType.GHAST.getDefaultLootTable(),
-			EntityType.GUARDIAN.getDefaultLootTable(),
-			EntityType.HUSK.getDefaultLootTable(),
-			EntityType.RAVAGER.getDefaultLootTable(),
-			EntityType.ILLUSIONER.getDefaultLootTable(),
-			EntityType.PHANTOM.getDefaultLootTable(),
-			EntityType.PILLAGER.getDefaultLootTable(),
-			EntityType.SKELETON.getDefaultLootTable(),
-			EntityType.SPIDER.getDefaultLootTable(),
-			EntityType.STRAY.getDefaultLootTable(),
-			EntityType.VINDICATOR.getDefaultLootTable(),
-			EntityType.WITCH.getDefaultLootTable(),
-			EntityType.WITHER_SKELETON.getDefaultLootTable(),
-			EntityType.ZOGLIN.getDefaultLootTable(),
-			EntityType.ZOMBIE.getDefaultLootTable(),
-			EntityType.ZOMBIFIED_PIGLIN.getDefaultLootTable(),
-			EntityType.HOGLIN.getDefaultLootTable(),
-			EntityType.ZOMBIE_VILLAGER.getDefaultLootTable()
+			EntityTypes.BLAZE.getDefaultLootTable(),
+			EntityTypes.CAVE_SPIDER.getDefaultLootTable(),
+			EntityTypes.CREEPER.getDefaultLootTable(),
+			EntityTypes.DROWNED.getDefaultLootTable(),
+			EntityTypes.ELDER_GUARDIAN.getDefaultLootTable(),
+			EntityTypes.ENDERMAN.getDefaultLootTable(),
+			EntityTypes.EVOKER.getDefaultLootTable(),
+			EntityTypes.GHAST.getDefaultLootTable(),
+			EntityTypes.GUARDIAN.getDefaultLootTable(),
+			EntityTypes.HUSK.getDefaultLootTable(),
+			EntityTypes.RAVAGER.getDefaultLootTable(),
+			EntityTypes.ILLUSIONER.getDefaultLootTable(),
+			EntityTypes.PHANTOM.getDefaultLootTable(),
+			EntityTypes.PILLAGER.getDefaultLootTable(),
+			EntityTypes.SKELETON.getDefaultLootTable(),
+			EntityTypes.SPIDER.getDefaultLootTable(),
+			EntityTypes.STRAY.getDefaultLootTable(),
+			EntityTypes.VINDICATOR.getDefaultLootTable(),
+			EntityTypes.WITCH.getDefaultLootTable(),
+			EntityTypes.WITHER_SKELETON.getDefaultLootTable(),
+			EntityTypes.ZOGLIN.getDefaultLootTable(),
+			EntityTypes.ZOMBIE.getDefaultLootTable(),
+			EntityTypes.ZOMBIFIED_PIGLIN.getDefaultLootTable(),
+			EntityTypes.HOGLIN.getDefaultLootTable(),
+			EntityTypes.ZOMBIE_VILLAGER.getDefaultLootTable()
 	)
 		.filter(Optional::isPresent)
 		.map(Optional::orElseThrow)
