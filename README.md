@@ -1,5 +1,5 @@
 # SimpleHats
- Simple hat mod for Minecraft
+ Simple hats mod for Minecraft
 
 
 
